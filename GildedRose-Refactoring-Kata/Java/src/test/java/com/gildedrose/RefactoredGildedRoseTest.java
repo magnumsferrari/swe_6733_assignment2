@@ -1,15 +1,15 @@
 package com.gildedrose;
 
-        import static org.junit.Assert.*;
+import org.junit.Test;
 
-        import org.junit.Test;
+import static org.junit.Assert.assertEquals;
 
-public class GildedRoseTest {
+public class RefactoredGildedRoseTest {
 
     @Test
     public void testItemName() {
         Item[] items = new Item[]{new Item("foo", 0, 0)};
-        GildedRose app = new GildedRose(items);
+        RefactoredGildedRose app = new RefactoredGildedRose(items);
         //app.updateQuality();
         assertEquals("foo", app.items[0].name);
     }
@@ -30,29 +30,6 @@ public class GildedRoseTest {
         testConcertQualityLT50SellinLT0
      */
 
-//    @Test
-//    public void testRegularQE1SLT0(){
-//        Item[] items = new Item[]{
-//                new Item("item1",-1,1)
-//
-//        };
-//
-//        // Create a new GildedRose instance
-//        GildedRose app = new GildedRose(items);
-//
-//        // test that the quality and names are the same as in out list
-//        assertEquals("item1", app.items[0].name);
-//        assertEquals(1, app.items[0].quality);
-//        assertEquals(-1, app.items[0].sellIn);
-//
-//        // call the update quality method of our GildedRose instance
-//        app.updateQuality();
-//
-//        // test that the qualities have been updated
-//        assertEquals("item1", app.items[0].name);
-//        assertEquals(0, app.items[0].quality);
-//        assertEquals(-2, app.items[0].sellIn);
-//    }
 
     @Test
     public void testRegularQGT1SLT0(){
@@ -63,7 +40,7 @@ public class GildedRoseTest {
         };
 
         // Create a new GildedRose instance
-        GildedRose app = new GildedRose(items);
+        RefactoredGildedRose app = new RefactoredGildedRose(items);
 
         // test that the quality and names are the same as in out list
         assertEquals("item1", app.items[0].name);
@@ -90,93 +67,6 @@ public class GildedRoseTest {
 
     }
 
-//    @Test
-//    public void testRegularQGT0SGE0(){
-//        Item[] items = new Item[]{
-//                new Item("item1",0,1),
-//                new Item("item1",10,8)
-//
-//        };
-//
-//        // Create a new GildedRose instance
-//        GildedRose app = new GildedRose(items);
-//
-//        // test that the quality and names are the same as in out list
-//        assertEquals("item1", app.items[0].name);
-//        assertEquals(1, app.items[0].quality);
-//        assertEquals(0, app.items[0].sellIn);
-//
-//        assertEquals("item1", app.items[1].name);
-//        assertEquals(8, app.items[1].quality);
-//        assertEquals(10, app.items[1].sellIn);
-//
-//        // call the update quality method of our GildedRose instance
-//        app.updateQuality();
-//
-//        // test that the qualities have been updated
-//        assertEquals("item1", app.items[0].name);
-//        assertEquals(0, app.items[0].quality);
-//        assertEquals(-1, app.items[0].sellIn);
-//
-//        assertEquals("item1", app.items[1].name);
-//        assertEquals(7, app.items[1].quality);
-//        assertEquals(9, app.items[1].sellIn);
-//
-//    }
-
-//    @Test
-//    public void testRegularQLTE0SGE0(){
-//        Item[] items = new Item[]{
-//                new Item("item1",0,0),
-//                new Item("item1",1,0),
-//                new Item("item1",0,-1),
-//                new Item("item1",1,-1)
-//        };
-//
-//        // Create a new GildedRose instance
-//        GildedRose app = new GildedRose(items);
-//
-//        // test that the quality and names are the same as in out list
-//        assertEquals("item1", app.items[0].name);
-//        assertEquals(0, app.items[0].quality);
-//        assertEquals(0, app.items[0].sellIn);
-//
-//        assertEquals("item1", app.items[1].name);
-//        assertEquals(0, app.items[1].quality);
-//        assertEquals(1, app.items[1].sellIn);
-//
-//        assertEquals("item1", app.items[2].name);
-//        assertEquals(-1, app.items[2].quality);
-//        assertEquals(0, app.items[0].sellIn);
-//
-//        assertEquals("item1", app.items[3].name);
-//        assertEquals(-1, app.items[3].quality);
-//        assertEquals(1, app.items[3].sellIn);
-//
-//
-//        // call the update quality method of our GildedRose instance
-//        app.updateQuality();
-//
-//        // test that the qualities have been updated
-//        assertEquals("item1", app.items[0].name);
-//        assertEquals(0, app.items[0].quality);
-//        assertEquals(-1, app.items[0].sellIn);
-//
-//        assertEquals("item1", app.items[1].name);
-//        assertEquals(0, app.items[1].quality);
-//        assertEquals(0, app.items[1].sellIn);
-//
-//        assertEquals("item1", app.items[2].name);
-//        assertEquals(-1, app.items[2].quality);
-//        assertEquals(-1, app.items[0].sellIn);
-//
-//        assertEquals("item1", app.items[3].name);
-//        assertEquals(-1, app.items[3].quality);
-//        assertEquals(0, app.items[3].sellIn);
-//
-//
-//    }
-
 
     @Test
     public void testSulfuras(){
@@ -186,7 +76,7 @@ public class GildedRoseTest {
         };
 
         // Create a new GildedRose instance
-        GildedRose app = new GildedRose(items);
+        RefactoredGildedRose app = new RefactoredGildedRose(items);
 
         // test that the quality and names are the same as in out list
         assertEquals("Sulfuras, Hand of Ragnaros", app.items[0].name);
@@ -203,8 +93,6 @@ public class GildedRoseTest {
     }
 
 
-
-
     @Test
     public void testAgedBrieQLT50SE0(){
         Item[] items = new Item[]{
@@ -213,7 +101,7 @@ public class GildedRoseTest {
         };
 
         // Create a new GildedRose instance
-        GildedRose app = new GildedRose(items);
+        RefactoredGildedRose app = new RefactoredGildedRose(items);
 
         // test that the quality and names are the same as in out list
         assertEquals("Aged Brie", app.items[0].name);
@@ -229,7 +117,6 @@ public class GildedRoseTest {
         assertEquals(-2, app.items[0].sellIn);
 
     }
-
     @Test
     public void testAgedBrie(){
         Item[] items = new Item[]{
@@ -239,7 +126,7 @@ public class GildedRoseTest {
         };
 
         // Create a new GildedRose instance
-        GildedRose app = new GildedRose(items);
+        RefactoredGildedRose app = new RefactoredGildedRose(items);
 
         // test that the quality and names are the same as in out list
         assertEquals("Aged Brie", app.items[0].name);
@@ -264,7 +151,7 @@ public class GildedRoseTest {
                 new Item("Backstage passes to a TAFKAL80ETC concert",12,45)
 
         };
-        GildedRose app = new GildedRose(items);
+        RefactoredGildedRose app = new RefactoredGildedRose(items);
         // test that the quality and names are the same as in out list
         assertEquals("Backstage passes to a TAFKAL80ETC concert", app.items[0].name);
         assertEquals(50, app.items[0].quality);
@@ -291,7 +178,7 @@ public class GildedRoseTest {
                 new Item("Backstage passes to a TAFKAL80ETC concert",7,45)
 
         };
-        GildedRose app = new GildedRose(items);
+        RefactoredGildedRose app = new RefactoredGildedRose(items);
         // test that the quality and names are the same as in out list
         assertEquals("Backstage passes to a TAFKAL80ETC concert", app.items[0].name);
         assertEquals(50, app.items[0].quality);
@@ -319,7 +206,7 @@ public class GildedRoseTest {
                 new Item("Backstage passes to a TAFKAL80ETC concert",2,45)
 
         };
-        GildedRose app = new GildedRose(items);
+        RefactoredGildedRose app = new RefactoredGildedRose(items);
         // test that the quality and names are the same as in out list
         assertEquals("Backstage passes to a TAFKAL80ETC concert", app.items[0].name);
         assertEquals(50, app.items[0].quality);
@@ -347,7 +234,7 @@ public class GildedRoseTest {
                 new Item("Backstage passes to a TAFKAL80ETC concert",0,45)
 
         };
-        GildedRose app = new GildedRose(items);
+        RefactoredGildedRose app = new RefactoredGildedRose(items);
         // test that the quality and names are the same as in out list
         assertEquals("Backstage passes to a TAFKAL80ETC concert", app.items[0].name);
         assertEquals(50, app.items[0].quality);
