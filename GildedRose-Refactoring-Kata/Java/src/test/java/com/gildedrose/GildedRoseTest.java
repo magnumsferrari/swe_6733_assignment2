@@ -30,29 +30,29 @@ public class GildedRoseTest {
         testConcertQualityLT50SellinLT0
      */
 
-//    @Test
-//    public void testRegularQE1SLT0(){
-//        Item[] items = new Item[]{
-//                new Item("item1",-1,1)
-//
-//        };
-//
-//        // Create a new GildedRose instance
-//        GildedRose app = new GildedRose(items);
-//
-//        // test that the quality and names are the same as in out list
-//        assertEquals("item1", app.items[0].name);
-//        assertEquals(1, app.items[0].quality);
-//        assertEquals(-1, app.items[0].sellIn);
-//
-//        // call the update quality method of our GildedRose instance
-//        app.updateQuality();
-//
-//        // test that the qualities have been updated
-//        assertEquals("item1", app.items[0].name);
-//        assertEquals(0, app.items[0].quality);
-//        assertEquals(-2, app.items[0].sellIn);
-//    }
+    @Test
+    public void testRegularQE1SLT0(){
+        Item[] items = new Item[]{
+                new Item("item1",-1,1)
+
+        };
+
+        // Create a new GildedRose instance
+        GildedRose app = new GildedRose(items);
+
+        // test that the quality and names are the same as in out list
+        assertEquals("item1", app.items[0].name);
+        assertEquals(1, app.items[0].quality);
+        assertEquals(-1, app.items[0].sellIn);
+
+        // call the update quality method of our GildedRose instance
+        app.updateQuality();
+
+        // test that the qualities have been updated
+        assertEquals("item1", app.items[0].name);
+        assertEquals(0, app.items[0].quality);
+        assertEquals(-2, app.items[0].sellIn);
+    }
 
     @Test
     public void testRegularQGT1SLT0(){
@@ -90,92 +90,92 @@ public class GildedRoseTest {
 
     }
 
-//    @Test
-//    public void testRegularQGT0SGE0(){
-//        Item[] items = new Item[]{
-//                new Item("item1",0,1),
-//                new Item("item1",10,8)
-//
-//        };
-//
-//        // Create a new GildedRose instance
-//        GildedRose app = new GildedRose(items);
-//
-//        // test that the quality and names are the same as in out list
-//        assertEquals("item1", app.items[0].name);
-//        assertEquals(1, app.items[0].quality);
-//        assertEquals(0, app.items[0].sellIn);
-//
-//        assertEquals("item1", app.items[1].name);
-//        assertEquals(8, app.items[1].quality);
-//        assertEquals(10, app.items[1].sellIn);
-//
-//        // call the update quality method of our GildedRose instance
-//        app.updateQuality();
-//
-//        // test that the qualities have been updated
-//        assertEquals("item1", app.items[0].name);
-//        assertEquals(0, app.items[0].quality);
-//        assertEquals(-1, app.items[0].sellIn);
-//
-//        assertEquals("item1", app.items[1].name);
-//        assertEquals(7, app.items[1].quality);
-//        assertEquals(9, app.items[1].sellIn);
-//
-//    }
+     @Test
+    public void testRegularQGT0SGE0(){
+        Item[] items = new Item[]{
+                new Item("item1",0,1),
+                new Item("item1",10,8)
 
-//    @Test
-//    public void testRegularQLTE0SGE0(){
-//        Item[] items = new Item[]{
-//                new Item("item1",0,0),
-//                new Item("item1",1,0),
-//                new Item("item1",0,-1),
-//                new Item("item1",1,-1)
-//        };
-//
-//        // Create a new GildedRose instance
-//        GildedRose app = new GildedRose(items);
-//
-//        // test that the quality and names are the same as in out list
-//        assertEquals("item1", app.items[0].name);
-//        assertEquals(0, app.items[0].quality);
-//        assertEquals(0, app.items[0].sellIn);
-//
-//        assertEquals("item1", app.items[1].name);
-//        assertEquals(0, app.items[1].quality);
-//        assertEquals(1, app.items[1].sellIn);
-//
-//        assertEquals("item1", app.items[2].name);
-//        assertEquals(-1, app.items[2].quality);
-//        assertEquals(0, app.items[0].sellIn);
-//
-//        assertEquals("item1", app.items[3].name);
-//        assertEquals(-1, app.items[3].quality);
-//        assertEquals(1, app.items[3].sellIn);
-//
-//
-//        // call the update quality method of our GildedRose instance
-//        app.updateQuality();
-//
-//        // test that the qualities have been updated
-//        assertEquals("item1", app.items[0].name);
-//        assertEquals(0, app.items[0].quality);
-//        assertEquals(-1, app.items[0].sellIn);
-//
-//        assertEquals("item1", app.items[1].name);
-//        assertEquals(0, app.items[1].quality);
-//        assertEquals(0, app.items[1].sellIn);
-//
-//        assertEquals("item1", app.items[2].name);
-//        assertEquals(-1, app.items[2].quality);
-//        assertEquals(-1, app.items[0].sellIn);
-//
-//        assertEquals("item1", app.items[3].name);
-//        assertEquals(-1, app.items[3].quality);
-//        assertEquals(0, app.items[3].sellIn);
-//
-//
-//    }
+        };
+
+        // Create a new GildedRose instance
+        GildedRose app = new GildedRose(items);
+
+        // test that the quality and names are the same as in out list
+        assertEquals("item1", app.items[0].name);
+        assertEquals(1, app.items[0].quality);
+        assertEquals(0, app.items[0].sellIn);
+
+        assertEquals("item1", app.items[1].name);
+        assertEquals(8, app.items[1].quality);
+        assertEquals(10, app.items[1].sellIn);
+
+        // call the update quality method of our GildedRose instance
+        app.updateQuality();
+
+        // test that the qualities have been updated
+        assertEquals("item1", app.items[0].name);
+        assertEquals(0, app.items[0].quality);
+        assertEquals(-1, app.items[0].sellIn);
+
+        assertEquals("item1", app.items[1].name);
+        assertEquals(7, app.items[1].quality);
+        assertEquals(9, app.items[1].sellIn);
+
+    }
+
+    @Test
+    public void testRegularQLTE0SGE0(){
+        Item[] items = new Item[]{
+                new Item("item1",0,0),
+                new Item("item1",1,0),
+                new Item("item1",0,-1),
+                new Item("item1",1,-1)
+        };
+
+        // Create a new GildedRose instance
+        GildedRose app = new GildedRose(items);
+
+        // test that the quality and names are the same as in out list
+        assertEquals("item1", app.items[0].name);
+        assertEquals(0, app.items[0].quality);
+        assertEquals(0, app.items[0].sellIn);
+
+        assertEquals("item1", app.items[1].name);
+        assertEquals(0, app.items[1].quality);
+        assertEquals(1, app.items[1].sellIn);
+
+        assertEquals("item1", app.items[2].name);
+        assertEquals(-1, app.items[2].quality);
+        assertEquals(0, app.items[0].sellIn);
+
+        assertEquals("item1", app.items[3].name);
+        assertEquals(-1, app.items[3].quality);
+        assertEquals(1, app.items[3].sellIn);
+
+
+        // call the update quality method of our GildedRose instance
+        app.updateQuality();
+
+        // test that the qualities have been updated
+        assertEquals("item1", app.items[0].name);
+        assertEquals(0, app.items[0].quality);
+        assertEquals(-1, app.items[0].sellIn);
+
+        assertEquals("item1", app.items[1].name);
+        assertEquals(0, app.items[1].quality);
+        assertEquals(0, app.items[1].sellIn);
+
+        assertEquals("item1", app.items[2].name);
+        assertEquals(-1, app.items[2].quality);
+        assertEquals(-1, app.items[0].sellIn);
+
+        assertEquals("item1", app.items[3].name);
+        assertEquals(-1, app.items[3].quality);
+        assertEquals(0, app.items[3].sellIn);
+
+
+    }
 
 
     @Test
@@ -368,5 +368,76 @@ public class GildedRoseTest {
         assertEquals(-1, app.items[1].sellIn);
     }
 
+    @Test
+    public void Conjured() {
+        Item[] items = new Item[]{
+                new Item("Conjured", 10, 10),
+                new Item("Conjured", -1, 10),
+                new Item("Conjured", 10, 0),
+                new Item("Conjured", -1, 0),
+                new Item("Conjured",-1,1),
+                new Item("Conjured", -1, 3)
+        };
 
+        GildedRose app = new GildedRose(items);
+        //initial state
+        assertEquals("Conjured", app.items[0].name);
+        assertEquals(10, app.items[0].quality);
+        assertEquals(10, app.items[0].sellIn);
+
+        assertEquals("Conjured", app.items[1].name);
+        assertEquals(10, app.items[1].quality);
+        assertEquals(-1, app.items[1].sellIn);
+
+        assertEquals("Conjured", app.items[2].name);
+        assertEquals(0, app.items[2].quality);
+        assertEquals(10, app.items[2].sellIn);
+
+        assertEquals("Conjured", app.items[3].name);
+        assertEquals(0, app.items[3].quality);
+        assertEquals(-1, app.items[3].sellIn);
+
+        assertEquals("Conjured", app.items[4].name);
+        assertEquals(1, app.items[4].quality);
+        assertEquals(-1, app.items[4].sellIn);
+
+        assertEquals("Conjured", app.items[5].name);
+        assertEquals(3, app.items[5].quality);
+        assertEquals(-1, app.items[5].sellIn);
+
+        app.updateQuality();
+
+        //final state
+        assertEquals("Conjured", app.items[0].name);
+        assertEquals(8, app.items[0].quality);
+        assertEquals(9, app.items[0].sellIn);
+
+        assertEquals("Conjured", app.items[1].name);
+        assertEquals(6, app.items[1].quality);
+        assertEquals(-2, app.items[1].sellIn);
+
+        assertEquals("Conjured", app.items[2].name);
+        assertEquals(0, app.items[2].quality);
+        assertEquals(9, app.items[2].sellIn);
+
+        assertEquals("Conjured", app.items[3].name);
+        assertEquals(0, app.items[3].quality);
+        assertEquals(-2, app.items[3].sellIn);
+
+        assertEquals("Conjured", app.items[4].name);
+        assertEquals(0, app.items[4].quality);
+        assertEquals(-2, app.items[4].sellIn);
+
+        assertEquals("Conjured", app.items[5].name);
+        assertEquals(0, app.items[5].quality);
+        assertEquals(-2, app.items[5].sellIn);
+
+    }
 }
+
+
+// sell in 10, q 10
+// s -1, q 10
+// s -1, q 1
+// s 10, q, 0
+// s -1, q 0
