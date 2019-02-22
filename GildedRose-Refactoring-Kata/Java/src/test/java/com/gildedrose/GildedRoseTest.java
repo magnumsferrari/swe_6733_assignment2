@@ -10,25 +10,8 @@ public class GildedRoseTest {
     public void testItemName() {
         Item[] items = new Item[]{new Item("foo", 0, 0)};
         GildedRose app = new GildedRose(items);
-        //app.updateQuality();
         assertEquals("foo", app.items[0].name);
     }
-        /*
-        testRegular
-            (Q>0, Q<=0)x(S<0, S>=0)
-
-        testSulfuras
-            (Q>0, Q<=0)x(S<0, S>=0)
-
-        testAgedBrie...
-            ( Q<=50, S>=0, S<0)
-
-        testConcertQualityGTE50SellinGT0
-        testConcertQualityLT50SellinGT11
-        testConcertQualityLT50SellinLT11GT6
-        testConcertQualityLT50SellinLT6GT0
-        testConcertQualityLT50SellinLT0
-     */
 
     @Test
     public void testRegularQE1SLT0(){
@@ -369,75 +352,68 @@ public class GildedRoseTest {
     }
 
     @Test
-    public void Conjured() {
+    public void testConjured() {
         Item[] items = new Item[]{
-                new Item("Conjured", 10, 10),
-                new Item("Conjured", -1, 10),
-                new Item("Conjured", 10, 0),
-                new Item("Conjured", -1, 0),
-                new Item("Conjured",-1,1),
-                new Item("Conjured", -1, 3)
+                new Item("Conjured Mana Cake", 10, 10),
+                new Item("Conjured Mana Cake", -1, 10),
+                new Item("Conjured Mana Cake", 10, 0),
+                new Item("Conjured Mana Cake", -1, 0),
+                new Item("Conjured Mana Cake",-1,1),
+                new Item("Conjured Mana Cake", -1, 3)
         };
 
         GildedRose app = new GildedRose(items);
         //initial state
-        assertEquals("Conjured", app.items[0].name);
+        assertEquals("Conjured Mana Cake", app.items[0].name);
         assertEquals(10, app.items[0].quality);
         assertEquals(10, app.items[0].sellIn);
 
-        assertEquals("Conjured", app.items[1].name);
+        assertEquals("Conjured Mana Cake", app.items[1].name);
         assertEquals(10, app.items[1].quality);
         assertEquals(-1, app.items[1].sellIn);
 
-        assertEquals("Conjured", app.items[2].name);
+        assertEquals("Conjured Mana Cake", app.items[2].name);
         assertEquals(0, app.items[2].quality);
         assertEquals(10, app.items[2].sellIn);
 
-        assertEquals("Conjured", app.items[3].name);
+        assertEquals("Conjured Mana Cake", app.items[3].name);
         assertEquals(0, app.items[3].quality);
         assertEquals(-1, app.items[3].sellIn);
 
-        assertEquals("Conjured", app.items[4].name);
+        assertEquals("Conjured Mana Cake", app.items[4].name);
         assertEquals(1, app.items[4].quality);
         assertEquals(-1, app.items[4].sellIn);
 
-        assertEquals("Conjured", app.items[5].name);
+        assertEquals("Conjured Mana Cake", app.items[5].name);
         assertEquals(3, app.items[5].quality);
         assertEquals(-1, app.items[5].sellIn);
 
         app.updateQuality();
 
         //final state
-        assertEquals("Conjured", app.items[0].name);
+        assertEquals("Conjured Mana Cake", app.items[0].name);
         assertEquals(8, app.items[0].quality);
         assertEquals(9, app.items[0].sellIn);
 
-        assertEquals("Conjured", app.items[1].name);
+        assertEquals("Conjured Mana Cake", app.items[1].name);
         assertEquals(6, app.items[1].quality);
         assertEquals(-2, app.items[1].sellIn);
 
-        assertEquals("Conjured", app.items[2].name);
+        assertEquals("Conjured Mana Cake", app.items[2].name);
         assertEquals(0, app.items[2].quality);
         assertEquals(9, app.items[2].sellIn);
 
-        assertEquals("Conjured", app.items[3].name);
+        assertEquals("Conjured Mana Cake", app.items[3].name);
         assertEquals(0, app.items[3].quality);
         assertEquals(-2, app.items[3].sellIn);
 
-        assertEquals("Conjured", app.items[4].name);
+        assertEquals("Conjured Mana Cake", app.items[4].name);
         assertEquals(0, app.items[4].quality);
         assertEquals(-2, app.items[4].sellIn);
 
-        assertEquals("Conjured", app.items[5].name);
+        assertEquals("Conjured Mana Cake", app.items[5].name);
         assertEquals(0, app.items[5].quality);
         assertEquals(-2, app.items[5].sellIn);
 
     }
 }
-
-
-// sell in 10, q 10
-// s -1, q 10
-// s -1, q 1
-// s 10, q, 0
-// s -1, q 0
