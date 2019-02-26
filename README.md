@@ -25,7 +25,7 @@ or code coverage tool showing your project's code coverage. Include the screensh
             
 4.Show that all your unit tests pass. Take a screen shot of the JUnit tests in your IDE, showing the list of all unit tests and their results. 
 Or copy the console output of your JUnit tests into a text file. Include the screen shot or text file in your git repo. Name the file test-results.png or test-results.txt.     
-  >  Test List : <a href='https://raw.githubusercontent.com/magnumsferrari/swe_6733_assignment2/master/GildedRose-Refactoring-Kata/Team2_A2_session2Refactored_code-coverage.png'>Team2_A2_session1_test-results.png</a>
+  >  Test List : <img src='https://raw.githubusercontent.com/magnumsferrari/swe_6733_assignment2/master/GildedRose-Refactoring-Kata/Team2_A2_session2Refactored_code-coverage.png'>Team2_A2_session1_test-results.png</img>
          
 5.Refactor the Gilded Rose production code, removing as many code smells as possible, refactoring for clean code. Your refactored 
 Gilded Rose production code should be short and concise. Commit your refactored code to your repo.     
