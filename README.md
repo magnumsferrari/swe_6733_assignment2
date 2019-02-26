@@ -37,6 +37,6 @@ have at least one test method for Conjured items, and it proves that Conjured it
   > Session 2 video  - abridged for size ~1.5hrs to 15 mins : https://youtu.be/vhpGYiphS-U    
   > Test Coverage Conjured Item : <a href='https://raw.githubusercontent.com/emadvaid/6733/master/GildedRose-Refactoring-Kata/Team2_A2_session2Refactored_code-coverage.png'>Team2_A2_session2Refactored_code-coverage.png</a><br />
   > Test Results for Final Code: <a href='https://raw.githubusercontent.com/emadvaid/6733/master/GildedRose-Refactoring-Kata/Team2_A2_session2Refactored_test-results.png'>Team2_A2_session2Refactored_test-results.png</a><br />
-  > Team2_A2_session2Refactored <a href='https://github.com/emadvaid/6735/blob/master/GildedRose-Refactoring-Kata/Team2_A2_session2Refactored%20Test%20Results%20-%20All_in_gilded-rose-kata.html'>All_in_gilded-rose-kata.htm'>Test Results</a></br>
+  > Team2_A2_session2Refactored <a href='https://github.com/emadvaid/6735/blob/master/GildedRose-Refactoring-Kata/Team2_A2_session2Refactored%20Test%20Results%20-%20All_in_gilded-rose-kata.html'>All_in_gilded-rose-kata.htm'>Test Results</a><br />
                                                  
  NOTE All This information and screen shots are included in: Team2_A2_EmergSFW6733_READ_ME.docx
